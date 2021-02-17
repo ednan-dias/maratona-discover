@@ -4,7 +4,7 @@
 
 <hr> <br>
 
-## **Visualização do site:** <https://dev-finances-ednan.netlify.app/#>
+## **Visualização do site:** <https://dev-finances-ednan.netlify.app/>
 
 <hr> <br>
 
