@@ -32,7 +32,11 @@ const Transaction = {
 
         App.reload()
     },
+    clear() {
+        Transaction.all.splice(0, Transaction.all.length)
 
+        App.reload()
+    },
     incomes() {
         let income = 0
         Transaction.all.forEach(transaction => {
@@ -43,7 +47,6 @@ const Transaction = {
 
         return income
     },
-
     expenses() {
         let expense = 0
         Transaction.all.forEach(transaction => {
@@ -81,7 +84,7 @@ const DOM = {
                 <td class="${CSSclass}"> ${amount}</td>
                 <td class="date">${transaction.date}</td>
                 <td>
-                    <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
+                    <img style="cursor:pointer" onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
                 </td>
         `
         return html
@@ -110,9 +113,9 @@ const Utils = {
         return `${splitedDate[2]}/${splitedDate[1]}/${splitedDate[0]}`
     },
     formatAmount(value) {
-        value = Number(value) * 100
+        value = value * 100
 
-        return value
+        return Math.round(value)
     },
     formatCurrency(value) {
         const signal = Number(value) < 0 ? '-' : ''

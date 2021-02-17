@@ -50,7 +50,10 @@
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" onclick="Modal.open()" class="button new">+ Nova transação</a>
+            <div id="buttons">
+                <a href="#" onclick="Modal.open()" class="button new">+ Nova transação</a>
+                <a href="#" onclick="Transaction.clear()" class="button new">Remover todas as transações</a>
+            </div>
 
             <table id="data-table">
                 <thead>
@@ -99,7 +102,13 @@
     </div>
 
     <footer>
-        <p>Dev.finance$</p>
+        <a target="_blank" href="https://www.linkedin.com/in/ednan-dias-30962b186/"><img class="social"
+                src="./assets/linkedin.svg" alt="Perfil Linkedin Ednan Dias"></a>
+
+        <a target="_blank" href="https://github.com/ednan-dias"><img class="social" src="./assets/github.svg"
+                alt="Perfil GitHub Ednan Dias"></a>
+
+        <p>Ednan Dias, todos os direitos reservados. © 2021</p>
     </footer>
 
     <script src="./script.js"></script>
